@@ -37,11 +37,13 @@ for line in range(int(n), int(m)+1):
     port_list.append(line)
 port_lists = random.sample(port_list, int(m)-int(n))
 
+#print_status
 def print_status(ip, message, msg_type='*'):
     global print_lock
     with print_lock:
         print "[%s] %s - %s" % (msg_type, ip, message)
-#create tips
+
+#create ips
 class gen_ip:
     def __init__(self,ip):
         self.ip = ip
